@@ -7,7 +7,7 @@
 # create or update .ssh/config to disable known_hosts check
 
 # get the home dir
-home=$(getent passwd hadoop |awk -F":" '{print $6}')
+home=$(getent passwd hduser |awk -F":" '{print $6}')
 
 # exit if does not exist
 [ -d $home ] || exit 11
@@ -16,10 +16,11 @@ home=$(getent passwd hadoop |awk -F":" '{print $6}')
 cd
 
 # generate ssh keys
-ssh-keygen -t rsa -P ""
+ssh-keygen -t rsa -P "" -f ~/.ssh/id_rsa
 
 # set authorized keys
 cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
+rm -f ~/.ssh/authorized_keys2
 ln -s ~/.ssh/authorized_keys ~/.ssh/authorized_keys2
 
 # update the ssh/config file
@@ -32,6 +33,6 @@ END
 ssh $user@localhost date
 
 # setup the hdfs directories
-mkdir -p ~/hdfs/{name,data,tmp}
+mkdir -p ~/hdfs/{name1,name2,data1,data2,tmp}
 
 ### end ###

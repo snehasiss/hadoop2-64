@@ -15,7 +15,6 @@
 <!-- Site specific YARN configuration properties -->
 
 <configuration>
-
   <property>
     <name>yarn.nodemanager.aux-services</name>
     <value>mapreduce_shuffle</value>
@@ -24,10 +23,5 @@
   <property>
     <name>yarn.nodemanager.aux-services.mapreduce.shuffle.class</name>
     <value>org.apache.hadoop.mapred.ShuffleHandler</value>
-  </property>
-
-  <property>
-    <name></name>
-    <value></value>
   </property>
 </configuration>

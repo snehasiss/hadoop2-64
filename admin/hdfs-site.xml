@@ -24,7 +24,7 @@
 
   <property>
     <name>dfs.namenode.name.dir</name>
-    <value>file:///hdfs/name</value>
+    <value>file:///hdfs/name1,file:///hdfs/name2</value>
   </property>
 
   <property>
@@ -39,7 +39,7 @@
 
   <property>
     <name>dfs.datanode.data.dir</name>
-    <value>file:///hdfs/data</value>
+    <value>file:///hdfs/data1,file:///hdfs/data2</value>
   </property>
 
 </configuration>

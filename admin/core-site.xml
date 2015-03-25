@@ -41,7 +41,7 @@
 
   <property>
     <name>hadoop.proxyuser.hive.hosts</name>
-    <value>$HIVE_USER_Hostname_FQDN</value>
+    <value>$HIVE_HOSTNAME</value>
   </property>
 
   <property>
@@ -55,7 +55,7 @@
 
   <property>
     <name>hadoop.proxyuser.oozie.hosts</name>
-    <value>Oozie_Hostname_FQDN</value>
+    <value>OOZIE_HOSTNAME</value>
     <description>
        Hostname from where superuser oozie can connect. This
        is required only when installing oozie on the cluster.
