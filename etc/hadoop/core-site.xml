@@ -17,4 +17,49 @@
 <!-- Put site-specific property overrides in this file. -->
 
 <configuration>
+  <property>
+    <name>fs.defaultFS</name>
+    <value>hdfs://localhost:9000</value>
+  </property>
+
+  <property>
+    <name>hadoop.tmp.dir</name>
+    <value>file:///hdfs/tmp</value>
+  </property>
+
+  <property>
+    <name>io.file.buffer.size</name>
+    <value>131072</value>
+  </property>
+
+<!-- hive (if hive is installed on the cluster)  -->
+<!--
+  <property>
+    <name>hadoop.proxyuser.hive.groups</name>
+    <value>$HIVE_USER</value>
+  </property>
+
+  <property>
+    <name>hadoop.proxyuser.hive.hosts</name>
+    <value>$HIVE_HOSTNAME</value>
+  </property>
+
+  <property>
+    <name>hadoop.proxyuser.oozie.groups</name>
+    <value>users</value>
+    <description>
+     Allow the superuser oozie to impersonate any members of the group users. This
+     is required only when installing oozie on the cluster.
+    </description>
+  </property>
+
+  <property>
+    <name>hadoop.proxyuser.oozie.hosts</name>
+    <value>OOZIE_HOSTNAME</value>
+    <description>
+       Hostname from where superuser oozie can connect. This
+       is required only when installing oozie on the cluster.
+    </description>
+  </property>
+-->
 </configuration>

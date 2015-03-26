@@ -17,8 +17,45 @@
 <!-- Put site-specific property overrides in this file. -->
 
 <configuration>
+
   <property>
     <name>mapreduce.framework.name</name>
     <value>yarn</value>
   </property>
+
+  <property>
+    <name>mapreduce.job.committer.setup.cleanup.needed</name>
+    <value>true</value>
+  </property>
+
+  <property>
+    <name>mapreduce.task.io.sort.factor</name>
+    <value>10</value>
+  </property>
+
+  <property>
+    <name>mapreduce.task.io.sort.mb</name>
+    <value>100</value>
+  </property>
+
+  <property>
+    <name>mapreduce.map.sort.spill.percent</name>
+    <value>0.80</value>
+  </property>
+
+  <property>
+    <name>mapreduce.jobtracker.http.address</name>
+    <value>0.0.0.0:50030</value>
+  </property>
+
+  <property>
+    <name>mapreduce.jobtracker.handler.count</name>
+    <value>10</value>
+  </property>
+
+  <property>
+    <name>mapreduce.tasktracker.report.address</name>
+    <value>127.0.0.1:0</value>
+  </property>
+
 </configuration>
